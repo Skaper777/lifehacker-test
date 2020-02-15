@@ -7,6 +7,9 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
-  store,
+  store, 
+  created() {
+    this.$store.dispatch('fetchPosts')
+  },
   render: h => h(App)
 }).$mount('#app')
